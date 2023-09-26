@@ -54,4 +54,14 @@ while running:
     frame = (frame + 1) % 13
     x += x_dir * 5
     y += y_dir * 5
+
+    if x < 0:
+        x = 0
+    elif x > TUK_WIDTH:
+        x = TUK_WIDTH
+    if y < 0:
+        y = 0
+    elif y > TUK_HEIGHT:
+        y = TUK_HEIGHT
+
     delay(0.05)
