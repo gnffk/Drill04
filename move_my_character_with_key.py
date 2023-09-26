@@ -25,6 +25,15 @@ def handle_events():
             elif event.key == SDLK_DOWN:
                 y_dir = -1
                 walking_motion = 7
+
+            if x_dir == 1 and y_dir == 1:
+                walking_motion = 2
+            elif x_dir == -1 and y_dir == 1:
+                walking_motion = 4
+            elif x_dir == 1 and y_dir == -1:
+                walking_motion =0
+            elif x_dir == -1 and y_dir == -1:
+                walking_motion = 6
         elif event.type == SDL_KEYUP:
             x_dir = 0
             y_dir = 0
